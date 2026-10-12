@@ -1,4 +1,4 @@
-/* Nitsayra Craft.id — Cutest Coquette Theme */
+/* Nitsayra Craft.id — Cutest Pretty Theme */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,600&family=Quicksand:wght@400;500;600;700&family=Parisienne&display=swap');
 
 :root{
@@ -113,7 +113,7 @@ nav{
 .hero-photo-inner{text-align:center;padding:30px}
 .hero-photo-inner .big{font-size:90px;line-height:1;animation:float 3s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(4deg)}}
-.coquette-frame{position:absolute;inset:12px;border:2px solid white;border-radius:18px;pointer-events:none}
+.pretty-frame{position:absolute;inset:12px;border:2px solid white;border-radius:18px;pointer-events:none}
 .sticker{
   position:absolute;background:white;border-radius:999px;padding:8px 14px;
   font-size:13px;font-weight:700;box-shadow:var(--shadow);

@@ -23,10 +23,10 @@ const CATALOG = [
     id: 'bracelet', title: 'Bracelet', icon: '📿',
     desc: 'Gelang manik pastel, mutiara & pita satin. Bisa custom nama, warna & ukuran!',
     items: [
-      {name:'Swan Lake Bracelet', price:25000, emoji:'🦢', desc:'Mutiara + charm angsa coquette.', photos:['images/bracelet-swan-1.jpg','images/bracelet-swan-2.jpg','images/bracelet-swan-3.jpg']},
+      {name:'Swan Lake Bracelet', price:25000, emoji:'🦢', desc:'Mutiara + charm angsa pretty.', photos:['images/bracelet-swan-1.jpg','images/bracelet-swan-2.jpg','images/bracelet-swan-3.jpg']},
       {name:'Pink Ribbon Bracelet', price:20000, emoji:'🎀', desc:'Manik pink + pita satin mini.', photos:['images/bracelet-ribbon-1.jpg','images/bracelet-ribbon-2.jpg','images/bracelet-ribbon-3.jpg']},
       {name:'Strawberry Beads', price:18000, emoji:'🍓', desc:'Manik stroberi super gemes.', photos:['images/bracelet-strawberry-1.jpg','images/bracelet-strawberry-2.jpg','images/bracelet-strawberry-3.jpg']},
-      {name:'Pearl Charm Bracelet', price:28000, emoji:'🤍', desc:'Mutiara + charm pilihan coquette.', photos:['images/bracelet-pearl-1.jpg','images/bracelet-pearl-2.jpg','images/bracelet-pearl-3.jpg']},
+      {name:'Pearl Charm Bracelet', price:28000, emoji:'🤍', desc:'Mutiara + charm pilihan pretty.', photos:['images/bracelet-pearl-1.jpg','images/bracelet-pearl-2.jpg','images/bracelet-pearl-3.jpg']},
     ]
   },
   {
@@ -44,7 +44,7 @@ const CATALOG = [
     desc: 'Kalung mutiara & pendant yang manis. Hypoallergenic, aman untuk kulit sensitif!',
     items: [
       {name:'Pearl Necklace', price:45000, emoji:'🤍', desc:'Kalung mutiara classic elegan.', photos:['images/necklace-pearl-1.jpg','images/necklace-pearl-2.jpg','images/necklace-pearl-3.jpg']},
-      {name:'Ribbon Pendant', price:35000, emoji:'🎀', desc:'Liontin pita coquette super manis.', photos:['images/necklace-ribbon-1.jpg','images/necklace-ribbon-2.jpg','images/necklace-ribbon-3.jpg']},
+      {name:'Ribbon Pendant', price:35000, emoji:'🎀', desc:'Liontin pita pretty super manis.', photos:['images/necklace-ribbon-1.jpg','images/necklace-ribbon-2.jpg','images/necklace-ribbon-3.jpg']},
       {name:'Heart Locket', price:38000, emoji:'💗', desc:'Liontin hati + inisial kamu.', photos:['images/necklace-heart-1.jpg','images/necklace-heart-2.jpg','images/necklace-heart-3.jpg']},
       {name:'Daisy Choker', price:32000, emoji:'🌼', desc:'Choker beads bunga daisy.', photos:['images/necklace-daisy-1.jpg','images/necklace-daisy-2.jpg','images/necklace-daisy-3.jpg']},
     ]
