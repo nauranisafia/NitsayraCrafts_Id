@@ -14,6 +14,8 @@ const priceText = p => (typeof p === 'number' ? rupiah(p) : p);
 //   images/bracelet-flowery-white-1.jpg  (Flowery Beads White)
 //   images/bracelet-flowery-colorful-1.jpg  (Flowery Beads Colorful)
 //   images/bracelet-butterfly-1.jpg  (Gelang Crystal dan Beads Kupu-Kupu)
+//   images/necklace-stone-1.jpg s/d images/necklace-stone-9.jpg  (Stone Necklace)
+//   images/necklace-stone-love-1.jpg  (Stone Necklace Love)
 // Selama fotonya belum ada, yang tampil gambar emoji placeholder.
 const CATALOG = [
   {
@@ -51,10 +53,8 @@ const CATALOG = [
     id: 'necklace', title: 'Necklace', icon: '💎',
     desc: 'Kalung mutiara & pendant yang manis. Hypoallergenic, aman untuk kulit sensitif!',
     items: [
-      {name:'Pearl Necklace', price:45000, emoji:'🤍', desc:'Kalung mutiara classic elegan.', photos:['images/necklace-pearl-1.jpg','images/necklace-pearl-2.jpg','images/necklace-pearl-3.jpg']},
-      {name:'Ribbon Pendant', price:35000, emoji:'🎀', desc:'Liontin pita pretty super manis.', photos:['images/necklace-ribbon-1.jpg','images/necklace-ribbon-2.jpg','images/necklace-ribbon-3.jpg']},
-      {name:'Heart Locket', price:38000, emoji:'💗', desc:'Liontin hati + inisial kamu.', photos:['images/necklace-heart-1.jpg','images/necklace-heart-2.jpg','images/necklace-heart-3.jpg']},
-      {name:'Daisy Choker', price:32000, emoji:'🌼', desc:'Choker beads bunga daisy.', photos:['images/necklace-daisy-1.jpg','images/necklace-daisy-2.jpg','images/necklace-daisy-3.jpg']},
+      {name:'Stone Necklace', price:'Rp 47.000', emoji:'💎', desc:'Kalung dengan batu yang cantik.', photos:['images/necklace-stone-1.jpg','images/necklace-stone-2.jpg','images/necklace-stone-3.jpg','images/necklace-stone-4.jpg','images/necklace-stone-5.jpg','images/necklace-stone-6.jpg','images/necklace-stone-7.jpg','images/necklace-stone-8.jpg','images/necklace-stone-9.jpg']},
+      {name:'Stone Necklace Love', price:'Rp 37.000', emoji:'💗', desc:'Kalung dengan batu yang cantik berbentuk love.', photos:['images/necklace-stone-love-1.jpg']},
     ]
   },
 ];
