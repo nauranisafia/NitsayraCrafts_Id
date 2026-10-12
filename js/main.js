@@ -34,7 +34,7 @@ const CATALOG = [
       {name:'Flowery Beads Black and White', price:'Rp 27.000', emoji:'🖤', desc:'Gelang bunga dengan warna hitam dan putih.', photos:['images/bracelet-flowery-bw-1.jpg']},
       {name:'Flowery Beads White', price:'Rp 27.000', emoji:'🤍', desc:'Gelang bunga dengan warna putih.', photos:['images/bracelet-flowery-white-1.jpg']},
       {name:'Flowery Beads Colorful', price:'Rp 27.000', emoji:'🌸', desc:'Gelang bunga dengan berbagai warna.', photos:['images/bracelet-flowery-colorful-1.jpg']},
-      {name:'Gelang Crystal dan Beads Kupu-Kupu', price:'Rp 25.000', emoji:'🦋', desc:'Gelang tali dengan crystal dan manik kupu-kupu.', photos:['images/bracelet-butterfly-1.jpg']},
+      {name:'Gelang Crystal dan Beads Kupu-Kupu', price:'Rp 17.000 - 27.000', emoji:'🦋', desc:'Gelang tali dengan crystal dan manik kupu-kupu.', photos:['images/bracelet-butterfly-1.jpg']},
     ]
   },
   {
