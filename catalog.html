@@ -17,7 +17,6 @@
       <a href="about.html">About Us</a>
       <a href="catalog.html" class="active">Catalog</a>
       <a href="contact.html">Contact Us</a>
-      <a href="#" class="btn btn-small cart-btn" onclick="toggleCart(event)">🛍️ Keranjang <span class="cart-count" id="cartCount">0</span></a>
     </div>
     <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('show')">☰</button>
   </div>
@@ -28,7 +27,7 @@
     <div class="script">our collection</div>
     <h2>Katalog Gemes 🎀</h2>
     <div class="divider">♡ ♡ ♡</div>
-    <p>12 produk signature coquette. Klik <b>+ Keranjang</b> lalu checkout via WhatsApp!</p>
+    <p>12 produk signature coquette. Klik <b>Order via WhatsApp</b> untuk pesan langsung!</p>
   </div>
   <div class="search-box"><input type="text" id="searchInput" placeholder="🔍 Cari gelang, jepit, scrunchie..." oninput="renderCatalog()"></div>
   <div class="filter-bar" id="filterBar">
@@ -60,9 +59,7 @@
   </div>
   <div class="copy">© 2026 Nitsayra Craft.id ♡ Made with 💗 & 🎀</div>
 </footer>
-<div class="overlay" id="overlay" onclick="toggleCart()"></div>
-<aside class="drawer" id="drawer"><h3>🛍️ Keranjangmu 🎀</h3><div id="cartItems"></div><div style="font-weight:800;font-size:18px" id="cartTotal">Total: Rp 0</div><button class="btn" style="margin-top:12px;justify-content:center" onclick="checkoutWA()">Checkout via WA 💬</button><button class="btn btn-light btn-small" style="margin-top:8px" onclick="toggleCart()">Lanjut belanja ♡</button></aside>
-<div class="toast" id="toast">Ditambahkan ke keranjang 🎀</div>
+<div class="toast" id="toast">Hai bestie! 🎀</div>
 <a class="float-wa" href="https://wa.me/6281213206792" target="_blank">💬</a>
 <script src="js/main.js"></script>
 <script>
@@ -76,7 +73,7 @@ function renderCatalog(){
   const list=PRODUCTS.filter(p=>(activeCat==='all'||p.cat===activeCat)&&(p.name.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q)));
   document.getElementById('catalogGrid').innerHTML=list.length?list.map(cardHTML).join(''):`<p style="grid-column:1/-1;text-align:center">🥺 Produk tidak ditemukan... coba kata lain ya bestie!</p>`;
 }
-renderCatalog();updateCartUI();
+renderCatalog();
 </script>
 </body>
 </html>

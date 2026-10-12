@@ -225,27 +225,7 @@ footer{margin-top:40px;background:#fff;border-top:3px dashed var(--pink-200);pad
 .foot-grid a:hover{color:var(--pink-600)}
 .copy{text-align:center;margin-top:22px;font-size:13px;border-top:1.5px dashed var(--pink-200);padding-top:14px}
 
-/* cart drawer */
-.cart-btn{position:relative}
-.cart-count{
-  position:absolute;top:-6px;right:-6px;background:var(--pink-600);color:white;
-  font-size:11px;min-width:20px;height:20px;border-radius:999px;display:grid;place-items:center;
-  border:2px solid white;font-weight:800;
-}
-.drawer{
-  position:fixed;top:0;right:-380px;width:min(360px,92vw);height:100vh;background:white;z-index:99;
-  box-shadow:-10px 0 30px rgba(0,0,0,.15);transition:.3s;padding:22px;display:flex;flex-direction:column;
-  border-left:3px dashed var(--pink-200);
-}
-.drawer.open{right:0}
-.drawer h3{margin-bottom:10px}
-#cartItems{flex:1;overflow:auto;display:flex;flex-direction:column;gap:10px;margin:12px 0}
-.cart-item{display:flex;gap:10px;align-items:center;background:var(--pink-50);border-radius:14px;padding:10px;border:1.5px solid var(--pink-100)}
-.cart-item .e{font-size:30px}
-.overlay{position:fixed;inset:0;background:rgba(107,74,82,.4);opacity:0;pointer-events:none;transition:.3s;z-index:98}
-.overlay.show{opacity:1;pointer-events:auto}
-.qty{display:flex;gap:8px;align-items:center;margin-left:auto}
-.qty button{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--pink-300);background:white;cursor:pointer;font-weight:800}
+/* toast */
 .toast{
   position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(100px);
   background:var(--pink-700);color:white;padding:12px 22px;border-radius:999px;
