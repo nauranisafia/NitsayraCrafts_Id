@@ -1,4 +1,4 @@
-// Nitsayra Craft.id — catalog logic (4 kategori + slider foto, order via WA)
+// Nitsayra Craft — catalog logic (4 kategori + slider foto, order via WA)
 const WA_NUMBER = '6281213206792';
 const rupiah = n => 'Rp ' + n.toLocaleString('id-ID');
 
@@ -160,7 +160,7 @@ function orderItem(catId,ii){
   const cat = CATALOG.find(c=>c.id===catId);
   const it = cat ? cat.items[ii] : null;
   if(!it) return;
-  const text = `Halo Nitsayra Craft.id! 🎀%0A%0AAku mau order:%0A• ${encodeURIComponent(it.name)} (${encodeURIComponent(cat.title)}) — ${encodeURIComponent(rupiah(it.price))}%0A%0AMakasih ya kak! 💗`;
+  const text = `Halo Nitsayra Craft! 🎀%0A%0AAku mau order:%0A• ${encodeURIComponent(it.name)} (${encodeURIComponent(cat.title)}) — ${encodeURIComponent(rupiah(it.price))}%0A%0AMakasih ya kak! 💗`;
   window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
 }
 
