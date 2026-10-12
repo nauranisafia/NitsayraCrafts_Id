@@ -28,7 +28,7 @@ const priceText = p => (typeof p === 'number' ? rupiah(p) : p);
 const CATALOG = [
   {
     id: 'dolls', title: 'Various Crocheted Dolls', icon: '🧸', hideDesc: true,
-    desc: 'Boneka rajut (amigurumi) super gemes, dirajut satu per satu dengan benang premium. Cocok buat kado & koleksi!',
+    desc: 'Aneka rajutan berkualitas premium, cocok untuk kado dan koleksi.',
     items: [
       {name:'Bandana Rajut', price:'Rp 28.000', emoji:'🧶', desc:'', photos:['images/dolls-bandana-1.jpg']},
       {name:'Berry buzz', price:'Rp 48.000', emoji:'🍓', desc:'', photos:['images/dolls-berrybuzz-1.jpg']},
@@ -40,7 +40,7 @@ const CATALOG = [
   },
   {
     id: 'bracelet', title: 'Bracelet', icon: '📿',
-    desc: 'Gelang manik pastel, mutiara & pita satin. Bisa custom nama, warna & ukuran!',
+    desc: 'Berbagai macam gelang manik - manik dan gelang crystal',
     items: [
       {name:'Stone Bracelet', price:'Rp 17.000 - 35.000', emoji:'💎', desc:'Gelang tali dengan tambahan batu dan beads cantik.', photos:['images/bracelet-stone-1.jpg']},
       {name:'Flowery Beads Black and White', price:'Rp 27.000', emoji:'🖤', desc:'Gelang bunga dengan warna hitam dan putih.', photos:['images/bracelet-flowery-bw-1.jpg']},
@@ -58,7 +58,7 @@ const CATALOG = [
   },
   {
     id: 'necklace', title: 'Necklace', icon: '💎',
-    desc: 'Kalung mutiara & pendant yang manis. Hypoallergenic, aman untuk kulit sensitif!',
+    desc: 'Kalung manik-manik dan crystal membuat gayamu semakin all out!',
     items: [
       {name:'Stone Necklace', price:'Rp 47.000', emoji:'💎', desc:'Kalung dengan batu yang cantik.', photos:['images/necklace-stone-1.jpg','images/necklace-stone-2.jpg','images/necklace-stone-3.jpg','images/necklace-stone-4.jpg','images/necklace-stone-5.jpg','images/necklace-stone-6.jpg','images/necklace-stone-7.jpg','images/necklace-stone-8.jpg','images/necklace-stone-9.jpg']},
       {name:'Stone Necklace Love', price:'Rp 37.000', emoji:'💗', desc:'Kalung dengan batu yang cantik berbentuk love.', photos:['images/necklace-stone-love-1.jpg']},
