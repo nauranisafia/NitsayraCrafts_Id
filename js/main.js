@@ -14,6 +14,7 @@ const priceText = p => (typeof p === 'number' ? rupiah(p) : p);
 //   images/bracelet-flowery-white-1.jpg  (Flowery Beads White)
 //   images/bracelet-flowery-colorful-1.jpg  (Flowery Beads Colorful)
 //   images/bracelet-butterfly-1.jpg  (Gelang Crystal dan Beads Kupu-Kupu)
+//   images/straps-phone-1.jpg s/d images/straps-phone-6.jpg  (Phone Strap)
 //   images/necklace-stone-1.jpg s/d images/necklace-stone-9.jpg  (Stone Necklace)
 //   images/necklace-stone-love-1.jpg  (Stone Necklace Love)
 // Selama fotonya belum ada, yang tampil gambar emoji placeholder.
@@ -43,10 +44,7 @@ const CATALOG = [
     id: 'straps', title: 'Phone Straps', icon: '📱',
     desc: 'Gantungan HP beads + charm lucu. Bikin HP makin gemes & tidak gampang jatuh!',
     items: [
-      {name:'Teddy Strap', price:28000, emoji:'🧸', desc:'Boneka teddy mini + beads pastel.', photos:['images/straps-teddy-1.jpg','images/straps-teddy-2.jpg','images/straps-teddy-3.jpg']},
-      {name:'Ballet Strap', price:24000, emoji:'🩰', desc:'Strap mutiara + charm balet.', photos:['images/straps-ballet-1.jpg','images/straps-ballet-2.jpg','images/straps-ballet-3.jpg']},
-      {name:'Heart Strap', price:18000, emoji:'💝', desc:'Gantungan hati + inisial nama.', photos:['images/straps-heart-1.jpg','images/straps-heart-2.jpg','images/straps-heart-3.jpg']},
-      {name:'Flower Strap', price:22000, emoji:'🌸', desc:'Beads bunga warna-warni ceria.', photos:['images/straps-flower-1.jpg','images/straps-flower-2.jpg','images/straps-flower-3.jpg']},
+      {name:'Phone Strap', price:'Rp 18.000', emoji:'📱', desc:'Phone strap dengan manik manik gemas yang mempercantik hp mu!', photos:['images/straps-phone-1.jpg','images/straps-phone-2.jpg','images/straps-phone-3.jpg','images/straps-phone-4.jpg','images/straps-phone-5.jpg','images/straps-phone-6.jpg']},
     ]
   },
   {
