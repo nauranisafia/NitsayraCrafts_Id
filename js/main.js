@@ -8,6 +8,13 @@ const priceText = p => (typeof p === 'number' ? rupiah(p) : p);
 // 2. Masukkan foto ke folder itu dengan nama persis seperti di bawah
 //    (cth: images/bracelet-stone-1.jpg)
 // 3. Format bebas: .jpg / .jpeg / .png / .webp
+// Nama file foto Crocheted Dolls:
+//   images/dolls-bandana-1.jpg  (Bandana Rajut)
+//   images/dolls-berrybuzz-1.jpg  (Berry buzz)
+//   images/dolls-bunbun-1.jpg  (Bun Bun Hops)
+//   images/dolls-mushie-1.jpg  (Chubby Mushie)
+//   images/dolls-donut-1.jpg  (Donut)
+//   images/dolls-chicks-1.jpg  (Fluffy Chicks)
 // Nama file foto Bracelet:
 //   images/bracelet-stone-1.jpg  (Stone Bracelet)
 //   images/bracelet-flowery-bw-1.jpg  (Flowery Beads Black and White)
@@ -20,13 +27,15 @@ const priceText = p => (typeof p === 'number' ? rupiah(p) : p);
 // Selama fotonya belum ada, yang tampil gambar emoji placeholder.
 const CATALOG = [
   {
-    id: 'dolls', title: 'Various Crocheted Dolls', icon: '🧸',
+    id: 'dolls', title: 'Various Crocheted Dolls', icon: '🧸', hideDesc: true,
     desc: 'Boneka rajut (amigurumi) super gemes, dirajut satu per satu dengan benang premium. Cocok buat kado & koleksi!',
     items: [
-      {name:'Bunny Doll', price:55000, emoji:'🐰', desc:'Boneka kelinci rajut + pita satin.', photos:['images/dolls-bunny-1.jpg','images/dolls-bunny-2.jpg','images/dolls-bunny-3.jpg']},
-      {name:'Bear Doll', price:55000, emoji:'🧸', desc:'Boneka beruang rajut, favorit bestie!', photos:['images/dolls-bear-1.jpg','images/dolls-bear-2.jpg','images/dolls-bear-3.jpg']},
-      {name:'Cat Doll', price:50000, emoji:'🐱', desc:'Boneka kucing rajut + syal mini.', photos:['images/dolls-cat-1.jpg','images/dolls-cat-2.jpg','images/dolls-cat-3.jpg']},
-      {name:'Frog Doll', price:45000, emoji:'🐸', desc:'Boneka kodok rajut yang lagi viral.', photos:['images/dolls-frog-1.jpg','images/dolls-frog-2.jpg','images/dolls-frog-3.jpg']},
+      {name:'Bandana Rajut', price:'Rp 28.000', emoji:'🧶', desc:'', photos:['images/dolls-bandana-1.jpg']},
+      {name:'Berry buzz', price:'Rp 48.000', emoji:'🍓', desc:'', photos:['images/dolls-berrybuzz-1.jpg']},
+      {name:'Bun Bun Hops', price:'Rp 50.000', emoji:'🐰', desc:'', photos:['images/dolls-bunbun-1.jpg']},
+      {name:'Chubby Mushie', price:'Rp 55.000', emoji:'🍄', desc:'', photos:['images/dolls-mushie-1.jpg']},
+      {name:'Donut', price:'Rp 47.000', emoji:'🍩', desc:'', photos:['images/dolls-donut-1.jpg']},
+      {name:'Fluffy Chicks', price:'Rp 25.000', emoji:'🐣', desc:'', photos:['images/dolls-chicks-1.jpg']},
     ]
   },
   {
@@ -78,7 +87,7 @@ function buildCatalog(){
           <span class="ph-count" id="phc-${c.id}-${ii}">1 / ${it.photos.length}</span>` : ''}
         </div>
         <h3>${it.name}</h3>
-        <p>${it.desc}</p>
+        ${c.hideDesc ? '' : `<p>${it.desc}</p>`}
         <div class="price">${priceText(it.price)}</div>
         <button class="btn btn-small" onclick="orderItem('${c.id}',${ii})">Order via WA 💬</button>
       </div>`;
