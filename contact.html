@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Nitsayra Craft.id 💌</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎀</text></svg>">
+</head>
+<body>
+<div class="topbar">💌 Fast respon tiap hari 09.00 – 21.00 WIB 🎀</div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><div class="logo-mark">🎀</div><div class="logo-text"><b>Nitsayra Craft</b><span>.ID ♡ HANDMADE</span></div></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="contact.html" class="active">Contact Us</a>
+      <a href="#" class="btn btn-small cart-btn" onclick="toggleCart(event)">🛍️ Keranjang <span class="cart-count" id="cartCount">0</span></a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('show')">☰</button>
+  </div>
+</nav>
+
+<section class="wrap">
+  <div class="sec-head">
+    <div class="script">say hello!</div>
+    <h2>Contact Us 💌</h2>
+    <div class="divider">♡ ♡ ♡</div>
+    <p>Mau tanya stok, custom, atau order dalam jumlah banyak? Hubungi kami — ramah & fast respon!</p>
+  </div>
+  <div class="contact-grid">
+    <div class="form-card">
+      <h3>Kirim Pesan ♡</h3>
+      <p style="font-size:13.5px">Isi form, pesanmu langsung diteruskan ke WhatsApp admin!</p>
+      <form onsubmit="return sendContact(event)">
+        <label>Nama Cantikmu 🎀</label>
+        <input type="text" id="cName" placeholder="cth: Naya" required>
+        <label>Email / No. WA 💌</label>
+        <input type="text" id="cContact" placeholder="cth: 0812xxxx / email" required>
+        <label>Keperluan ✨</label>
+        <select id="cNeed"><option>Tanya produk</option><option>Custom order</option><option>Order grosir / reseller</option><option>Komplain / retur</option><option>Lainnya</option></select>
+        <label>Pesanmu 🧸</label>
+        <textarea id="cMsg" placeholder="Halo kak, aku mau tanya..." required></textarea>
+        <button class="btn" type="submit" style="margin-top:14px;width:100%;justify-content:center">Kirim via WhatsApp 💬</button>
+      </form>
+    </div>
+    <div>
+      <div class="info-card">
+        <h3>Info Kontak 🎀</h3>
+        <div class="info-row"><span class="ic">💬</span><div><b>WhatsApp</b><br>0812-3456-7890<br><a href="https://wa.me/6281234567890" target="_blank" style="color:#d94f7a;font-weight:700">Chat sekarang →</a></div></div>
+        <div class="info-row"><span class="ic">📸</span><div><b>Instagram</b><br>@nitsayra.craft.id<br><a href="#" style="color:#d94f7a;font-weight:700">Follow kami →</a></div></div>
+        <div class="info-row"><span class="ic">🛍️</span><div><b>Shopee / TikTok Shop</b><br>NitsayraCraft.id<br><span style="font-size:13px">★ 4.9 | 2.500+ terjual</span></div></div>
+        <div class="info-row"><span class="ic">📍</span><div><b>Studio</b><br>Jl. Mawar No. 12, Bandung<br><span style="font-size:13px">Buka Senin–Sabtu, 09.00–17.00</span></div></div>
+        <div class="info-row"><span class="ic">⏰</span><div><b>Jam Respon</b><br>Setiap hari 09.00–21.00 WIB</div></div>
+      </div>
+      <div class="faq" id="faq">
+        <h3 style="margin:16px 0 8px">FAQ Gemes 💗</h3>
+        <details><summary>🎀 Apakah bisa custom nama / warna?</summary><p style="margin-top:8px;font-size:14px">Bisa banget! Tambahan Rp 5rb untuk custom nama. Chat admin untuk pilihan warna ya.</p></details>
+        <details><summary>📦 Berapa lama pengiriman?</summary><p style="margin-top:8px;font-size:14px">Ready stock dikirim H+1. Custom 1–3 hari. Ekspedisi JNE/J&T/GoSend ke seluruh Indonesia.</p></details>
+        <details><summary>💌 Apakah ada garansi?</summary><p style="margin-top:8px;font-size:14px">Putus / cacat dalam 7 hari? Kami ganti baru atau refund. Sertakan video unboxing ya!</p></details>
+        <details><summary>🎁 Apakah cocok untuk kado?</summary><p style="margin-top:8px;font-size:14px">Cocok banget! Semua paket sudah termasuk box + pita + thank you card. Bisa tambah kartu ucapan gratis.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div><div class="logo"><div class="logo-mark">🎀</div><div class="logo-text"><b>Nitsayra Craft</b><span>.ID ♡ HANDMADE</span></div></div>
+    <p style="font-size:14px;margin-top:10px">Handmade accessories dengan cinta 💗</p></div>
+    <div><h4>Menu 🎀</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="catalog.html">Catalog</a><a href="contact.html">Contact Us</a></div>
+    <div><h4>Kategori 💗</h4><a href="catalog.html?cat=bracelet">Bracelets</a><a href="catalog.html?cat=hair">Hair</a><a href="catalog.html?cat=charm">Charms</a><a href="catalog.html?cat=gift">Gift Set</a></div>
+    <div><h4>Bantuan 💌</h4><a href="contact.html">Hubungi Kami</a><a href="#faq">FAQ</a></div>
+  </div>
+  <div class="copy">© 2026 Nitsayra Craft.id ♡ Made with 💗 & 🎀</div>
+</footer>
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<aside class="drawer" id="drawer"><h3>🛍️ Keranjangmu 🎀</h3><div id="cartItems"></div><div style="font-weight:800;font-size:18px" id="cartTotal">Total: Rp 0</div><button class="btn" style="margin-top:12px;justify-content:center" onclick="checkoutWA()">Checkout via WA 💬</button><button class="btn btn-light btn-small" style="margin-top:8px" onclick="toggleCart()">Lanjut belanja ♡</button></aside>
+<div class="toast" id="toast">Ditambahkan ke keranjang 🎀</div>
+<a class="float-wa" href="https://wa.me/6281234567890" target="_blank">💬</a>
+<script src="js/main.js"></script>
+<script>updateCartUI();function sendContact(e){e.preventDefault();const n=document.getElementById('cName').value,k=document.getElementById('cNeed').value,m=document.getElementById('cMsg').value,c=document.getElementById('cContact').value;window.open('https://wa.me/6281234567890?text='+encodeURIComponent(`Halo Nitsayra Craft.id! 🎀\nNama: ${n}\nKontak: ${c}\nKeperluan: ${k}\nPesan: ${m}`),'_blank');showToast('Membuka WhatsApp... 💌');return false;}</script>
+</body>
+</html>
