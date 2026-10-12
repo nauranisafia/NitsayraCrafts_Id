@@ -1,12 +1,19 @@
 // Nitsayra Craft — catalog logic (4 kategori + slider foto, order via WA)
 const WA_NUMBER = '6281213206792';
 const rupiah = n => 'Rp ' + n.toLocaleString('id-ID');
+const priceText = p => (typeof p === 'number' ? rupiah(p) : p);
 
 // CARA PASANG FOTO ASLI:
 // 1. Buat folder "images" sejajar dengan index.html
 // 2. Masukkan foto ke folder itu dengan nama persis seperti di bawah
-//    (cth: images/dolls-bunny-1.jpg)
+//    (cth: images/bracelet-stone-1.jpg)
 // 3. Format bebas: .jpg / .jpeg / .png / .webp
+// Nama file foto Bracelet:
+//   images/bracelet-stone-1.jpg  (Stone Bracelet)
+//   images/bracelet-flowery-bw-1.jpg  (Flowery Beads Black and White)
+//   images/bracelet-flowery-white-1.jpg  (Flowery Beads White)
+//   images/bracelet-flowery-colorful-1.jpg  (Flowery Beads Colorful)
+//   images/bracelet-butterfly-1.jpg  (Gelang Crystal dan Beads Kupu-Kupu)
 // Selama fotonya belum ada, yang tampil gambar emoji placeholder.
 const CATALOG = [
   {
@@ -23,10 +30,11 @@ const CATALOG = [
     id: 'bracelet', title: 'Bracelet', icon: '📿',
     desc: 'Gelang manik pastel, mutiara & pita satin. Bisa custom nama, warna & ukuran!',
     items: [
-      {name:'Swan Lake Bracelet', price:25000, emoji:'🦢', desc:'Mutiara + charm angsa pretty.', photos:['images/bracelet-swan-1.jpg','images/bracelet-swan-2.jpg','images/bracelet-swan-3.jpg']},
-      {name:'Pink Ribbon Bracelet', price:20000, emoji:'🎀', desc:'Manik pink + pita satin mini.', photos:['images/bracelet-ribbon-1.jpg','images/bracelet-ribbon-2.jpg','images/bracelet-ribbon-3.jpg']},
-      {name:'Strawberry Beads', price:18000, emoji:'🍓', desc:'Manik stroberi super gemes.', photos:['images/bracelet-strawberry-1.jpg','images/bracelet-strawberry-2.jpg','images/bracelet-strawberry-3.jpg']},
-      {name:'Pearl Charm Bracelet', price:28000, emoji:'🤍', desc:'Mutiara + charm pilihan pretty.', photos:['images/bracelet-pearl-1.jpg','images/bracelet-pearl-2.jpg','images/bracelet-pearl-3.jpg']},
+      {name:'Stone Bracelet', price:'Rp 17.000 - 35.000', emoji:'💎', desc:'Gelang tali dengan tambahan batu dan beads cantik.', photos:['images/bracelet-stone-1.jpg']},
+      {name:'Flowery Beads Black and White', price:'Rp 27.000', emoji:'🖤', desc:'Gelang bunga dengan warna hitam dan putih.', photos:['images/bracelet-flowery-bw-1.jpg']},
+      {name:'Flowery Beads White', price:'Rp 27.000', emoji:'🤍', desc:'Gelang bunga dengan warna putih.', photos:['images/bracelet-flowery-white-1.jpg']},
+      {name:'Flowery Beads Colorful', price:'Rp 27.000', emoji:'🌸', desc:'Gelang bunga dengan berbagai warna.', photos:['images/bracelet-flowery-colorful-1.jpg']},
+      {name:'Gelang Crystal dan Beads Kupu-Kupu', price:'Rp 25.000', emoji:'🦋', desc:'Gelang tali dengan crystal dan manik kupu-kupu.', photos:['images/bracelet-butterfly-1.jpg']},
     ]
   },
   {
@@ -73,7 +81,7 @@ function buildCatalog(){
         </div>
         <h3>${it.name}</h3>
         <p>${it.desc}</p>
-        <div class="price">${rupiah(it.price)}</div>
+        <div class="price">${priceText(it.price)}</div>
         <button class="btn btn-small" onclick="orderItem('${c.id}',${ii})">Order via WA 💬</button>
       </div>`;
     }).join('');
@@ -160,7 +168,7 @@ function orderItem(catId,ii){
   const cat = CATALOG.find(c=>c.id===catId);
   const it = cat ? cat.items[ii] : null;
   if(!it) return;
-  const text = `Halo Nitsayra Craft! 🎀%0A%0AAku mau order:%0A• ${encodeURIComponent(it.name)} (${encodeURIComponent(cat.title)}) — ${encodeURIComponent(rupiah(it.price))}%0A%0AMakasih ya kak! 💗`;
+  const text = `Halo Nitsayra Craft! 🎀%0A%0AAku mau order:%0A• ${encodeURIComponent(it.name)} (${encodeURIComponent(cat.title)}) — ${encodeURIComponent(priceText(it.price))}%0A%0AMakasih ya kak! 💗`;
   window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
 }
 
