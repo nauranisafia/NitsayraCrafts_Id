@@ -85,7 +85,7 @@ function checkoutWA(){
   let total=0;
   ids.forEach(k=>{ const p=findP(k); total+=p.price*cart[k]; msg+=`%0A• ${p.name} x${cart[k]} — ${rupiah(p.price*cart[k])}`; });
   msg+=`%0A%0ATotal: ${rupiah(total)}%0A%0AMakasih ya kak! 💗`;
-  window.open(`https://wa.me/6281234567890?text=${msg}`,'_blank');
+  window.open(`https://wa.me/6281213206792?text=${msg}`,'_blank');
 }
 let toastTimer;
 function showToast(msg){
