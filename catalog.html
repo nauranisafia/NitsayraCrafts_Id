@@ -27,17 +27,10 @@
     <div class="script">our collection</div>
     <h2>Katalog Gemes 🎀</h2>
     <div class="divider">♡ ♡ ♡</div>
-    <p>12 produk signature coquette. Klik <b>Order via WhatsApp</b> untuk pesan langsung!</p>
+    <p>4 koleksi gemes: crocheted dolls, bracelet, phone straps & necklace. <b>Geser kiri-kanan</b> untuk lihat semua foto! Klik <b>Order via WhatsApp</b> untuk pesan langsung 💬</p>
   </div>
-  <div class="search-box"><input type="text" id="searchInput" placeholder="🔍 Cari gelang, jepit, scrunchie..." oninput="renderCatalog()"></div>
-  <div class="filter-bar" id="filterBar">
-    <button data-cat="all" class="active" onclick="setFilter('all')">Semua ♡</button>
-    <button data-cat="bracelet" onclick="setFilter('bracelet')">📿 Bracelets</button>
-    <button data-cat="hair" onclick="setFilter('hair')">🎀 Hair</button>
-    <button data-cat="charm" onclick="setFilter('charm')">📱 Charms</button>
-    <button data-cat="gift" onclick="setFilter('gift')">🎁 Gift Set</button>
-  </div>
-  <div class="grid3" id="catalogGrid"></div>
+  <div class="cat-pills" id="catPills"></div>
+  <div id="catalogSliders"></div>
 </section>
 
 <section class="wrap">
@@ -54,7 +47,7 @@
     <div><div class="logo"><div class="logo-mark">🎀</div><div class="logo-text"><b>Nitsayra Craft</b><span>.ID ♡ HANDMADE</span></div></div>
     <p style="font-size:14px;margin-top:10px">Handmade accessories dengan cinta 💗</p></div>
     <div><h4>Menu 🎀</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="catalog.html">Catalog</a><a href="contact.html">Contact Us</a></div>
-    <div><h4>Kategori 💗</h4><a href="catalog.html?cat=bracelet">Bracelets</a><a href="catalog.html?cat=hair">Hair</a><a href="catalog.html?cat=charm">Charms</a><a href="catalog.html?cat=gift">Gift Set</a></div>
+    <div><h4>Kategori 💗</h4><a href="catalog.html#dolls">Crocheted Dolls</a><a href="catalog.html#bracelet">Bracelets</a><a href="catalog.html#straps">Phone Straps</a><a href="catalog.html#necklace">Necklaces</a></div>
     <div><h4>Bantuan 💌</h4><a href="contact.html">Hubungi Kami</a><a href="contact.html#faq">FAQ</a></div>
   </div>
   <div class="copy">© 2026 Nitsayra Craft.id ♡ Made with 💗 & 🎀</div>
@@ -62,18 +55,5 @@
 <div class="toast" id="toast">Hai bestie! 🎀</div>
 <a class="float-wa" href="https://wa.me/6281213206792" target="_blank">💬</a>
 <script src="js/main.js"></script>
-<script>
-let activeCat='all';
-const params=new URLSearchParams(location.search);
-if(params.get('cat')) activeCat=params.get('cat');
-function setFilter(c){activeCat=c;document.querySelectorAll('#filterBar button').forEach(b=>b.classList.toggle('active',b.dataset.cat===c));renderCatalog();}
-document.querySelectorAll('#filterBar button').forEach(b=>b.classList.toggle('active',b.dataset.cat===activeCat));
-function renderCatalog(){
-  const q=(document.getElementById('searchInput').value||'').toLowerCase();
-  const list=PRODUCTS.filter(p=>(activeCat==='all'||p.cat===activeCat)&&(p.name.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q)));
-  document.getElementById('catalogGrid').innerHTML=list.length?list.map(cardHTML).join(''):`<p style="grid-column:1/-1;text-align:center">🥺 Produk tidak ditemukan... coba kata lain ya bestie!</p>`;
-}
-renderCatalog();
-</script>
 </body>
 </html>
